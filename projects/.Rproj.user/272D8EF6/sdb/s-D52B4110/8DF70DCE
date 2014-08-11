@@ -1,0 +1,17 @@
+{
+    "contents" : "pollutantmean <- function(directory, pollutant, id = 1:332) {\n  # empty dataframe to bind csv files to\n    all_data <- data.frame()\n    \n  # \"files\" is a list/vector of the csv files (to rbind)      \n    files <- list.files(directory, full.names = TRUE)\n  \n  # use a for-loop to rbind all files in directory\n    for (x in id) {\n          all_data <- rbind(all_data, read.csv(files[x]))\n  }\n    \n  # subset all_data to find specified pollutant\n    data_sub <- all_data[, pollutant]\n  \n  # find the mean without NA values\n    mean(data_sub, na.rm = TRUE)\n  \n}\n",
+    "created" : 1407788731713.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3917146088",
+    "id" : "8DF70DCE",
+    "lastKnownWriteTime" : 1407797028,
+    "path" : "~/coursera/projects/pollutantmean.R",
+    "project_path" : "pollutantmean.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

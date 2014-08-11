@@ -1,0 +1,17 @@
+{
+    "contents" : "## CONTROL STRUCTURES 8/11/14\n\n> #For flow: \n  >     #if/else\n  >     #for, while, repeat, next\n  >     #return\n  > # if(<condition>) {}\n  > # else if(<condition2>) {}\n  > # else {}\n  > if(x > 3) {\n          y <-  10\n  } else {\n          y <- 0\n  }\n\n> OR\n  > y <- if(x > 3) {10} else {0}\n\n> # In the second, y <- the entire if/else construct. \n  > #This is important for readability-- now you know it's all about y\n\n## for loops\n  > # for(i in 1:10) {print(i)}\n  > # ? Their lines break after the \"{\" and close \"}\" on a new line. I don't think it affects functionality, but it might be more readable that way. How can you do this in RStudio?\n  > # fcn note: seq_along(x) makes a numeric sequence the length of the x vector/list\n  > #If a  for loop only has a single expression, you can omit the {}:\n  > #for(i in seq_along(x)) print(i)\n  > #correction: for(i in seq_along(x)) print(x[i])\n \n\n## while loops\n  > # While loops begin by testing a condition.\n  > # Makes things easy to read sometimes-- know when your loop wants to end. **Need to make sure the condition will be met!!\n  > # Conditions evaluated from left to right.\n  \n \n  > # The only way to exit a repeat loop is to call \"break\".\n  > # Repeat loops create an infinite loop.\n  > # Better to set a hard limit (for loop) on the num of iterations, and then see if convergence was achieved.\n \n  \n  > # next is used to skip an iteration of a loop:\n  > # for(i in 1:100) {if(i < 20) {next}} ---> to skip the first 20 iterations\n\n  \n  \n  \n  \n  \n#FUNCTIONS\n  > ## Have named arguments that could have default values.\n  > formals(matrix)\n$data\n[1] NA\n\n$nrow\n[1] 1\n\n$ncol\n[1] 1\n\n$byrow\n[1] FALSE\n\n$dimnames\nNULL\n\n# Don't nec. need to define all args.\n# When you  name the args, the order doesn't matter...functionally.\n# Argument Matching: 1) R looks for an exact match, then 2) a partial match, then 3) a positional match.\nYou can also set an arg to NULL.\n## Lazy  Evaluation: args to a fcn are evaluated only as they're needed.\n## f <- function(a, b) {a^2}. Calling f(2) won't throw an error cause the function never actually uses b.\n## ? the \"...\" argument. Passing args to other functions?\n## If you don't know how many args will be passed to your fcn.\n## ARGS AFTER the ... HAVE to be named explicitly and CAN'T be partially matched.\n  \n\n\nFcn returns whatever the last expression was.",
+    "created" : 1407785778825.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "514120764",
+    "id" : "C6DFD088",
+    "lastKnownWriteTime" : 1407787759,
+    "path" : "~/coursera/lecture notes/Control+Functions.R",
+    "project_path" : "Control+Functions.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
